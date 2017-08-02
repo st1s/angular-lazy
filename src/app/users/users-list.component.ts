@@ -1,7 +1,8 @@
 /**
  * Created by NamitaMalik on 9/28/2016.
  */
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { ProviderService } from "../provider.service";
 
 @Component({
     template: `
@@ -18,8 +19,11 @@ import {Component} from '@angular/core';
 
 export class UsersListComponent {
     private users = [
-        {id: '1', name: 'John Doe'},
-        {id: '2', name: 'Jane Roe'},
-        {id: '3', name: 'John Smith'}
+        { id: '1', name: 'John Doe' },
+        { id: '2', name: 'Jane Roe' },
+        { id: '3', name: 'John Smith' }
     ];
+    constructor(public provider: ProviderService) {
+        console.log(provider);
+    }
 }

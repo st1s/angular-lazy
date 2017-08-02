@@ -1,8 +1,9 @@
 /**
- * Created by NamitaMalik on 9/27/2016.
+ * Created by NamitaMalik on 9/27/2016. Adapted by Stewan Pacheco on 02/08/2017.
  */
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import { ProviderService } from "../provider.service";
 
 @Component({
     template: `
@@ -19,7 +20,9 @@ import {Router} from '@angular/router';
 
 export class TasksListComponent {
 
-    constructor(private router:Router) {
+    constructor(private router:Router, public provider: ProviderService) {
+        provider.name = 'é legal';
+        console.log(provider);
     }
 
     private tasks = [
