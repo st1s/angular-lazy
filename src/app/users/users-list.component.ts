@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { ProviderService } from "../provider.service";
 
 @Component({
+    selector: 'app-users-list',
     template: `
     <div>
         <ul class="bubble">
@@ -25,5 +26,6 @@ export class UsersListComponent {
     ];
     constructor(public provider: ProviderService) {
         console.log(provider);
+        provider.name = 'material';
     }
 }

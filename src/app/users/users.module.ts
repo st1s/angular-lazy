@@ -1,11 +1,12 @@
 /**
  * Created by NamitaMalik on 9/28/2016. Adapted by Stewan Pacheco on 02/08/2017.
  */
-import {NgModule}       from '@angular/core';
-import {CommonModule}   from '@angular/common';
-import {UsersComponent}    from './users.component';
-import {UsersListComponent}  from './users-list.component';
-import {UsersRoutingModule} from "./users-routing.module";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { UsersComponent } from './users.component';
+import { UsersListComponent } from './users-list.component';
+import { UsersRoutingModule } from "./users-routing.module";
+import { ProviderService } from "../provider.service";
 
 @NgModule({
     imports: [
@@ -15,7 +16,11 @@ import {UsersRoutingModule} from "./users-routing.module";
     declarations: [
         UsersComponent,
         UsersListComponent
-    ]
+    ],
+    exports: [
+        UsersListComponent
+    ],
+    providers: [ProviderService]
 })
 export class UsersModule {
 }

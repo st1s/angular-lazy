@@ -7,6 +7,7 @@ import { ProviderService } from "../provider.service";
 
 @Component({
     template: `
+ 
     <div>
         <ul class="bubble">
             <li *ngFor="let task of tasks let i=index" (click)="onSelect(task)">
@@ -21,6 +22,7 @@ import { ProviderService } from "../provider.service";
 export class TasksListComponent {
 
     constructor(private router:Router, public provider: ProviderService) {
+        if (provider.name == 'angular')
         provider.name = 'é legal';
         console.log(provider);
     }

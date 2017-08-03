@@ -11,20 +11,20 @@ import { TasksListComponent } from './tasks-list.component';
     imports: [
         RouterModule.forChild([
             {
-                path: '',
+                path: '', // url = /tasks
                 component: TasksComponent,
                 children: [
                     {
-                        path: '',
+                        path: '', // url = /tasks
                         redirectTo: 'list',
                         pathMatch: 'full',
                     },
                     {
-                        path: 'list',
+                        path: 'list', // url = /tasks/list
                         component: TasksListComponent
                     },
                     {
-                        path: ':id',
+                        path: ':id', // url = /tasks/[id]
                         component: TaskDetailComponent,
                     }
                 ]
