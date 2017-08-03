@@ -3,7 +3,6 @@
  */
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import { ProviderService } from "../provider.service";
 
 @Component({
     template: `
@@ -21,10 +20,8 @@ import { ProviderService } from "../provider.service";
 
 export class TasksListComponent {
 
-    constructor(private router:Router, public provider: ProviderService) {
-        if (provider.name == 'angular')
-        provider.name = 'é legal';
-        console.log(provider);
+    constructor(private router:Router) {
+    
     }
 
     private tasks = [

@@ -2,7 +2,6 @@
  * Created by NamitaMalik on 9/28/2016. Adapted by Stewan Pacheco on 02/08/2017.
  */
 import { Component } from '@angular/core';
-import { ProviderService } from "../provider.service";
 
 @Component({
     selector: 'app-users-list',
@@ -24,8 +23,6 @@ export class UsersListComponent {
         { id: '2', name: 'Jane Roe' },
         { id: '3', name: 'John Smith' }
     ];
-    constructor(public provider: ProviderService) {
-        console.log(provider);
-        provider.name = 'material';
+    constructor() {
     }
 }

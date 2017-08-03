@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users.component';
 import { UsersListComponent } from './users-list.component';
 import { UsersRoutingModule } from "./users-routing.module";
-import { ProviderService } from "../provider.service";
 
 @NgModule({
     imports: [
@@ -19,8 +18,7 @@ import { ProviderService } from "../provider.service";
     ],
     exports: [
         UsersListComponent
-    ],
-    providers: [ProviderService]
+    ]
 })
 export class UsersModule {
 }

@@ -8,7 +8,6 @@ import { TaskDetailComponent } from './task-detail.component';
 import { TasksListComponent } from './tasks-list.component';
 import { TasksRoutingModule } from "./tasks-routing.module";
 import { UsersModule } from "../users/users.module";
-import { ProviderService } from "../provider.service";
 
 @NgModule({
     imports: [
@@ -21,7 +20,7 @@ import { ProviderService } from "../provider.service";
         TaskDetailComponent,
         TasksListComponent
     ],
-    providers: [ProviderService]
+    providers: []
 })
 export class TasksModule {
 }
